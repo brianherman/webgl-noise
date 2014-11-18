@@ -27,7 +27,10 @@
 #ifdef __WIN32__
 // The system level include file for GL extensions might not be up to date.
 #include "GL/glext.h"
-#else
+#endif
+#ifdef __APPLE__
+#include <OpenGL/glext.h>
+#else 
 #include <GL/glext.h>
 #endif
 

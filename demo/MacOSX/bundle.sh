@@ -10,7 +10,7 @@ fi
 bundle_name="$1"
 exec_file="$2"
 exec_name=`basename $bundle_name .app`
-
+chmod +x exec_file
 if [ ! -f $exec_file ]; then
   echo "Can't find $exec_file"
   exit 1
